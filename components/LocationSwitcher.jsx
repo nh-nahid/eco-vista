@@ -1,31 +1,57 @@
 "use client"
+import { getLocationLatLong, getLocationLatLongList } from '@/lib/location-info';
 import Image from 'next/image';
+import Link from 'next/link';
+import { useEffect, useState } from 'react';
 
 const LocationSwitcher = () => {
+    const [showLocationList, setShowLocationList] = useState(false);
+    const [locations, setLocations] = useState([]);
+
+    useEffect(() => {
+        async function getLocationList(params) {
+            const locationList = await getLocationLatLongList();
+            setLocations(locationList);
+        }
+
+        getLocationList();
+
+    }, [])
     return (
         <div className="relative">
-            <button>
+            <button onClick={() => setShowLocationList(!showLocationList)}>
                 <Image
                     className="size-9"
                     src="/link.svg"
                     alt="link icon"
-                    width={10}
-                    height={10}
+                    width={36}
+                    height={36}
                 />
             </button>
-            <div
-                className="absolute left-0 top-12 z-[999] w-full min-w-[280px] rounded-md bg-white p-4 shadow max-md:-translate-x-1/2"
-            >
-                <ul
-                    role="list"
-                    className="divide-y divide-gray-100 [&>*]:py-2 [&>li]:cursor-pointer"
-                >
-                    <li>Kolkata</li>
-                    <li>Dhaka</li>
-                    <li>London</li>
-                    <li>Amsterdam</li>
-                </ul>
-            </div>
+            {
+                showLocationList && (
+                    <div
+                        className="absolute left-0 top-12 z-[999] w-full min-w-[280px] rounded-md bg-white p-4 shadow max-md:-translate-x-1/2"
+                    >
+                        <ul
+                            role="list"
+                            className="divide-y divide-gray-100 [&>*]:py-2 [&>li]:cursor-pointer"
+                        >
+                            {
+                                locations.map((info) => (
+                                    <li key={info.location}>
+                                        <Link href={`/${info.location}?latitude=${info.latitude}&longitude=${info.longitude}`}
+                                        >
+                                            {info.location}
+                                        </Link>
+                                    </li>
+                                ))
+                            }
+                            
+                        </ul>
+                    </div>
+                )
+            }
         </div>
     );
 };

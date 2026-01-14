@@ -1,6 +1,7 @@
 import { getLocationData } from '@/lib/location-info';
 import Image from 'next/image';
 import React from 'react';
+import LocationSwitcher from './LocationSwitcher';
 
 const LocationInfo = async ({ lat, lon }) => {
     const locationInfo = await getLocationData(lat, lon);
@@ -16,8 +17,8 @@ const LocationInfo = async ({ lat, lon }) => {
                         {locationInfo?.continent}
                     </h2>
                    
+                    <LocationSwitcher />
 
-                   
                 </div>
                 <p className="text-lg text-[#C4C4C4] lg:text-xl">
                     {locationInfo?.countryName} | {locationInfo?.city}
