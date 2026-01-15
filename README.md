@@ -69,7 +69,7 @@ eco-vista/
 ## 🚀 Getting Started
  
 ```bash
-git clone [https://github.com/Learn-with-Sumit/batch-4-assignment-7-dev-news-nh-nahid](https://github.com/nh-nahid/eco-vista.git)
+git clone [https://github.com/nh-nahid/eco-vista.git]
 cd eco-vista
 
 npm install
@@ -107,4 +107,4 @@ Nahid Hossain
 - 🌱 Always learning and experimenting with new technologies.
 
 ## 📄 License
-All right reserved by LWS
+All right reserved by EcoVista
