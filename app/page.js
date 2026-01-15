@@ -1,6 +1,10 @@
-import LocationDetector from "@/components/LocationDetector";
-
+import { Suspense } from "react"
+import LocationDetector from "@/components/LocationDetector"
 
 export default function Home() {
-  return <LocationDetector />
+  return (
+    <Suspense fallback={null}>
+      <LocationDetector />
+    </Suspense>
+  )
 }
