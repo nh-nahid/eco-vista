@@ -30,7 +30,7 @@ The project focuses on presenting climate, environmental, and sustainability-rel
 
 | Home Page | News Detail Page |
 |-----------|-----------------|
-| ![Home Page](./public/home.png) | ![Video Detail Page](./public/loading.png) |
+| ![Home Page](./public/home.png) | ![Location Detection](./public/loading.png) |
 
 
 ## 📂 Project Structure
