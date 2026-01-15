@@ -30,7 +30,7 @@ The project focuses on presenting climate, environmental, and sustainability-rel
 
 | Home Page | News Detail Page |
 |-----------|-----------------|
-| ![Home Page](./public/home.png) | ![Video Detail Page](./public/details.png) |
+| ![Home Page](./public/home.png) | ![Video Detail Page](./public/loading.png) |
 
 
 ## 📂 Project Structure
@@ -79,6 +79,8 @@ yarn dev
 
 Open http://localhost:3000
 to view the project.
+
+Hosted link [https://eco-vista-vlv3.vercel.app/]
 
 ```
 
