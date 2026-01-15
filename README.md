@@ -36,7 +36,7 @@ The project focuses on presenting climate, environmental, and sustainability-rel
 ## 📂 Project Structure
 
 ```
-assignment-7/
+eco-vista/
 ├── app/
 │   ├── [location]          
 |   |     ├── @aqi
