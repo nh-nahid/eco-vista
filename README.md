@@ -38,36 +38,26 @@ The project focuses on presenting climate, environmental, and sustainability-rel
 ```
 assignment-7/
 ├── app/
-│   ├── [lang]          
-|   |     ├── (.)news
-|   |     |       └── [slug]
-|   |     |            └── page.js
-│   |     ├── dictionaries
+│   ├── [location]          
+|   |     ├── @aqi
+|   |     ├── @temperature      
+|   |     ├── @wind         
+│   |     ├── @weather
 |   |     |     ├── bn.json
 |   |     |     └── en.json
-|   |     ├── news
-|   |     |     └── [slug]
-|   |     |            ├── not-found.js
-|   |     |            └── page.js
-|   |     ├── dictionaries.js
 |   |     ├── layout.js
-|   |     └── page.js 
-│   ├── api/
-│   |    ├── news
-|   |    ├── [slug]
-|   |    ├──   └── route.js
-│   |    └── route.js
-|   ├── layout.js
-|   └── not-found.js  
+|   |     └── page.js              
+│   ├── api/location
+│   |    ├── [name]
+|   |    ├── location-util.js
+│   |    └── route.js 
 ├── components/            
-│   ├── Header.jsx
-|   ├── Modal.jsx
+│   ├── AQIComponent.jsx
+|   ├── Card.jsx
 │   └── ...other components
 ├── lib/
-│   ├── data.json
-|   └── exportData.js         
-├── utils/
-│   └── utils.js         
+│   ├── location-data.json
+|   └── location-info.js                 
 ├── package.json
 └── tailwind.config.js      
 
@@ -79,8 +69,8 @@ assignment-7/
 ## 🚀 Getting Started
  
 ```bash
-git clone https://github.com/Learn-with-Sumit/batch-4-assignment-7-dev-news-nh-nahid
-cd assignment-7
+git clone [https://github.com/Learn-with-Sumit/batch-4-assignment-7-dev-news-nh-nahid](https://github.com/nh-nahid/eco-vista.git)
+cd eco-vista
 
 npm install
 npm run dev
@@ -94,22 +84,18 @@ to view the project.
 
 ## 📝 Usage
 
-- Click on any news card from the home page to open its details.
-- When opened from the home page, the news appears in a modal overlay.
-- Reloading the page or visiting the URL directly opens the news as a full page.
-- The URL includes the news title as a slug (e.g. /news/ai-agents-are-taking-over).
-- Invalid or unknown slugs display a custom dark 404 page with a helpful message.
-- Views, upvotes, and downvotes are automatically formatted (e.g. 1.2K, 3.4M).
-- Published dates are converted to human-readable formats.
-- Use the loading state (or throttle network speed in DevTools) to simulate data fetch delays.
+- Explore ecological and environmental data from the homepage.
+- Invalid routes or unavailable data show a custom 404 page.
+- Metrics are automatically formatted for readability.
+- External API delays can be simulated using browser dev tools.
 
 
 ## 🔗 Future Improvements
 
-- Add server-side data persistence using a database or external API instead of static JSON.
-- Implement user authentication to enable personalized experiences and protected actions.
-- Introduce commenting and discussion threads to encourage community engagement.
-- Enhance SEO and performance optimization with dynamic metadata and caching strategies.
+- Integrate more environmental APIs (climate, biodiversity, pollution).
+- Add location-based ecological insights.
+- Cache API responses for performance optimization.
+- Add charts and visualizations for environmental trends.
 
 ## 👨‍💻 Author
 
