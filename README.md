@@ -28,7 +28,7 @@ The project focuses on presenting climate, environmental, and sustainability-rel
 
 ## 🖼️ Screenshots
 
-| Home Page | News Detail Page |
+| Home Page | Location Detection |
 |-----------|-----------------|
 | ![Home Page](./public/home.png) | ![Location Detection](./public/loading.png) |
 
